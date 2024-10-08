@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  width: 700px;
+  height: 100%;
+  text-align: center;
+  border: 15px solid black;
+  margin: 50px auto;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  background-color: lightblue;
+  padding: 20px;
+  border: 10px solid navy;
+  margin: 20px;
+
+  /* Margin property */
+
+  /* Padding property */
+
+  /* Border property */
+}
+section {
+  display: grid;
+  grid-template-areas: "box1 box2" "box3 box4";
+  justify-content: center;
+}
+
+.box1 {
+  grid-area: box1;
+}
+
+.box2 {
+  grid-area: box2;
+}
+
+.box3 {
+  grid-area: box3;
+}
+
+.box4 {
+  grid-area: box4;
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Form Portfolio</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <main>
+      <h1>Forms Portfolio (W1)</h1>
+      <p class="p-container">
+        Here's a few web contact form examples I made for my portfolio using
+        html and css. Each form has a unique design and functionality.
+      </p>
+
+      <!-- FORM 1 -->
+      <section class="form1-container">
+        <form class="form1">
+          <div class="form-intro">
+            <h2>Lets Chat!</h2>
+            <p>
+              Drop us a message or ask a question here. We will get back to you
+              shortly.
+            </p>
+          </div>
+          <div class="first-name">
+            <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              placeholder="First Name"
+            />
+          </div>
+
+          <div class="last-name">
+            <input
+              type="text"
+              name="lastname"
+              id="lastname"
+              placeholder="Last Name"
+            />
+          </div>
+
+          <div class="email">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+            />
+          </div>
+
+          <div class="phone">
+            <input type="tel" name="tel" id="tel" placeholder="Phone Number" />
+          </div>
+
+          <div class="message">
+            <textarea
+              type="textarea"
+              name="message"
+              id="message"
+              placeholder="Message"
+            ></textarea>
+          </div>
+
+          <div class="submit">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </section>
+
+      <!-- FORM 2 -->
+      <section class="form2-container">
+        <div class="background">
+          <form class="form2">
+            <div class="form-intro">
+              <h2>Subscribe Here</h2>
+              <p>
+                Subscribe here to be part of our all things technology
+                newsletter.
+              </p>
+            </div>
+            <div class="name">
+              <label for="name">Full Name</label>
+              <input type="text" name="name" id="name" />
+            </div>
+
+            <div class="email">
+              <label for="email-f2">Email Address</label>
+              <input type="email" name="email" id="email-f2" />
+            </div>
+
+            <div class="newsletter-container">
+              <label for="newsletter">Newsletter</label>
+              <select id="newsletter" name="newsletter" class="newsletter">
+                <option value="" disabled selected>Select option</option>
+                <option value="Web Development">Coding</option>
+                <option value="Web Design">Data Science</option>
+                <option value="SEO">Social Media</option>
+                <option value="Web Maintainence">UX/UI Design</option>
+                <option value="Other">All</option>
+              </select>
+            </div>
+
+            <div class="form-btn-container">
+              <button
+                type="submit"
+                name="subscribe"
+                class="form-btn form-btn-animation"
+              >
+                Subscribe
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- FORM 3 -->
+      <section class="form3-container">
+        <form class="form3">
+          <div class="form-intro-f3">
+            <h2>Contact</h2>
+            <p>
+              Please send us a message using the form below. You will recieve a
+              response within 48 hours.
+            </p>
+          </div>
+          <div class="first-name-f3">
+            <label for="first-name-f3">First Name</label>
+            <input type="text" name="first-name" id="first-name-f3" />
+          </div>
+          <div class="last-name-f3">
+            <label for="last-name-f3">Last Name</label>
+            <input type="text" name="last-name" id="last-name-f3" />
+          </div>
+
+          <div class="email-f3">
+            <label for="email-f3">Email Address</label>
+            <input type="email" name="email" id="email-f3" />
+          </div>
+
+          <div class="phone-f3">
+            <label for="phone-f3">Phone Number</label>
+            <input type="tel" name="tel" id="phone-f3" />
+          </div>
+
+          <div class="date">
+            <label for="date">Date Of Birth</label>
+            <input type="date" name="date" id="date" />
+          </div>
+
+          <div class="newsletter-f3">
+            <legend>Subscribe to our newsletter</legend>
+            <input type="checkbox" id="yes" name="yes" value="yes" />
+            <label for="yes">Yes</label>
+
+            <input type="checkbox" id="no" name="no" value="no" />
+            <label for="no">No</label>
+          </div>
+
+          <div class="message-f3">
+            <label for="message-f3">Message</label>
+            <textarea type="textarea" name="message" id="message-f3"></textarea>
+          </div>
+
+          <div class="submit-f3">
+            <button type="submit" value="Submit">Send</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- FORM 4 -->
+      <section class="form4-container">
+        <form class="form4">
+          <div class="form-intro">
+            <h2>Pesonality Quiz!</h2>
+            <p>A personality quiz to see how creative you are.</p>
+          </div>
+          <div class="name-f4">
+            <label for="name-f4">Your name</label>
+            <input type="text" name="name" id="name-f4" />
+          </div>
+
+          <div class="email-f4">
+            <label for="email-f4">Your email</label>
+            <input type="email" name="email" id="email-f4" />
+          </div>
+
+          <div class="animal">
+            <legend>Choose your spirit animal</legend>
+            <input type="radio" id="dog" name="dog" value="dog" />
+            <label for="dog">Dog</label>
+
+            <input type="radio" id="owl" name="owl" value="owl" />
+            <label for="owl">Owl</label>
+
+            <input type="radio" id="dolphin" name="dolphin" value="dolphin" />
+            <label for="dolphin">Dolphin</label>
+
+            <input type="radio" id="dragon" name="dragon" value="dragon" />
+            <label for="dragon">Dragon</label>
+          </div>
+
+          <div class="snack-container">
+            <label for="snack">What's your go-to snack?</label>
+            <select id="snack" name="snack" class="snack">
+              <option value="" disabled selected>Choose a snack</option>
+              <option value="Chocolate">Chocolate</option>
+              <option value="Crisps (chips)">Crisps (chips)</option>
+              <option value="Fruit">Fruit</option>
+              <option value="Biscuits">Biscuits</option>
+              <option value="Coffee">Coffee</option>
+            </select>
+          </div>
+          <br />
+
+          <label for="color">Which colour represents your current mood?</label>
+          <input type="color" id="color" name="color" /> <br /><br />
+
+          <label for="creativity">Rate your creativity level</label><br />
+          <input
+            type="range"
+            id="creativity"
+            name="creativity"
+            list="creativity-values"
+          />
+
+          <datalist id="creativity-values">
+            <option value="0" label="0"></option>
+
+            <option value="50" label="50"></option>
+
+            <option value="100" label="100"></option>
+          </datalist>
+
+          <div class="submit">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

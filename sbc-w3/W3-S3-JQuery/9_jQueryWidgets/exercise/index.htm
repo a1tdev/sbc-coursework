@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery UI Widgets Demo</title>
+
+    <!-- jQuery and jQuery UI CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script>
+      $(function () {
+        $("input").checkboxradio();
+      });
+    </script>
+
+    <script>
+      $(function () {
+        $("#accordion").accordion();
+      });
+    </script>
+
+    <script>
+      $(function () {
+        $("#sortable").sortable({
+          revert: true,
+        });
+        $("#draggable").draggable({
+          connectToSortable: "#sortable",
+          helper: "clone",
+          revert: "invalid",
+        });
+        $("ul, li").disableSelection();
+      });
+    </script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      .draggable-box {
+        width: 150px;
+        height: 150px;
+        background-color: #4caf50;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        cursor: move;
+      }
+
+      .datepicker {
+        margin-bottom: 20px;
+      }
+
+      .autocomplete {
+        margin-bottom: 20px;
+      }
+      #accordion,
+      .widget {
+        margin: 150px 0;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 10px;
+      }
+      li {
+        margin: 5px;
+        padding: 5px;
+        width: 150px;
+      }
+      .ui-state-default {
+        background-color: #4caf50;
+      }
+      .item-bg {
+        background-color: rgb(199, 102, 102);
+      }
+      li:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>jQuery UI Widgets Demo</h2>
+
+    <!-- Drag and Drop Box -->
+    <div class="draggable-box">Drag Me</div>
+
+    <!-- Date Picker Input -->
+    <p>
+      Select a date: <input type="text" id="datepicker" class="datepicker" />
+    </p>
+
+    <!-- Autocomplete Input -->
+    <p>
+      Start typing a fruit:
+      <input type="text" id="autocomplete" class="autocomplete" />
+    </p>
+
+    <!-- CHECKBOX -->
+
+    <div class="widget">
+      <h1>Checkbox and radio button widgets</h1>
+
+      <h2>Radio Group</h2>
+      <fieldset>
+        <legend>Select a Location:</legend>
+        <label for="radio-1">New York</label>
+        <input type="radio" name="radio-1" id="radio-1" />
+        <label for="radio-2">Paris</label>
+        <input type="radio" name="radio-1" id="radio-2" />
+        <label for="radio-3">London</label>
+        <input type="radio" name="radio-1" id="radio-3" />
+      </fieldset>
+
+      <h2>Checkbox</h2>
+      <fieldset>
+        <legend>Hotel Ratings:</legend>
+        <label for="checkbox-1">2 Star</label>
+        <input type="checkbox" name="checkbox-1" id="checkbox-1" />
+        <label for="checkbox-2">3 Star</label>
+        <input type="checkbox" name="checkbox-2" id="checkbox-2" />
+        <label for="checkbox-3">4 Star</label>
+        <input type="checkbox" name="checkbox-3" id="checkbox-3" />
+        <label for="checkbox-4">5 Star</label>
+        <input type="checkbox" name="checkbox-4" id="checkbox-4" />
+      </fieldset>
+
+      <h2>Checkbox nested in label</h2>
+      <fieldset>
+        <legend>Bed Type:</legend>
+        <label for="checkbox-nested-1"
+          >2 Double
+          <input
+            type="checkbox"
+            name="checkbox-nested-1"
+            id="checkbox-nested-1"
+          />
+        </label>
+        <label for="checkbox-nested-2"
+          >2 Queen
+          <input
+            type="checkbox"
+            name="checkbox-nested-2"
+            id="checkbox-nested-2"
+          />
+        </label>
+        <label for="checkbox-nested-3"
+          >1 Queen
+          <input
+            type="checkbox"
+            name="checkbox-nested-3"
+            id="checkbox-nested-3"
+          />
+        </label>
+        <label for="checkbox-nested-4"
+          >1 King
+          <input
+            type="checkbox"
+            name="checkbox-nested-4"
+            id="checkbox-nested-4"
+          />
+        </label>
+      </fieldset>
+    </div>
+
+    <!-- ACCORDION -->
+    <div id="accordion">
+      <h3>Section 1</h3>
+      <div>
+        <p>
+          Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam.
+          Integer ut neque. Vivamus nisi metus, molestie vel, gravida in,
+          condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi.
+          Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu
+          ante scelerisque vulputate.
+        </p>
+      </div>
+      <h3>Section 2</h3>
+      <div>
+        <p>
+          Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+          purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis
+          porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non
+          quam. In suscipit faucibus urna.
+        </p>
+      </div>
+      <h3>Section 3</h3>
+      <div>
+        <p>
+          Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque
+          lobortis. Phasellus pellentesque purus in massa. Aenean in pede.
+          Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed
+          commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis
+          leo purus venenatis dui.
+        </p>
+        <ul>
+          <li>List item one</li>
+          <li>List item two</li>
+          <li>List item three</li>
+        </ul>
+      </div>
+      <h3>Section 4</h3>
+      <div>
+        <p>
+          Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+          et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+          faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+          mauris vel est.
+        </p>
+        <p>
+          Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat
+          lectus. Class aptent taciti sociosqu ad litora torquent per conubia
+          nostra, per inceptos himenaeos.
+        </p>
+      </div>
+    </div>
+
+    <ul>
+      <li id="draggable" class="ui-state-highlight">Drag me down</li>
+    </ul>
+
+    <ul id="sortable">
+      <li class="ui-state-default item-bg">Item 1</li>
+      <li class="ui-state-default item-bg">Item 2</li>
+      <li class="ui-state-default item-bg">Item 3</li>
+      <li class="ui-state-default item-bg">Item 4</li>
+      <li class="ui-state-default item-bg">Item 5</li>
+    </ul>
+
+    <script>
+      $(document).ready(function () {
+        // Draggable widget
+        $(".draggable-box").draggable();
+
+        // Datepicker widget
+        $("#datepicker").datepicker();
+
+        // Autocomplete widget
+        var availableFruits = [
+          "Apple",
+          "Banana",
+          "Cherry",
+          "Date",
+          "Grape",
+          "Lemon",
+          "Mango",
+          "Orange",
+          "Peach",
+          "Pineapple",
+          "Strawberry",
+          "Watermelon",
+        ];
+        $("#autocomplete").autocomplete({
+          source: availableFruits,
+        });
+      });
+    </script>
+  </body>
+</html>
